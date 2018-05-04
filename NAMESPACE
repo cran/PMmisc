@@ -1,0 +1,16 @@
+exportPattern("^[[:alpha:]]+")
+
+  importFrom("stats", "as.ts", "lag", "median", "na.omit", "sd", "var")
+
+  importFrom("stats", "cor")
+
+  importFrom("graphics", "plot", "text")
+
+  importFrom("stats", "pnorm", "lm")
+
+  importFrom("graphics", "abline", "par", "title")
+
+  importFrom("stats", "scatter.smooth")
+
+
+
