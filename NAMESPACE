@@ -1,4 +1,4 @@
-exportPattern("^[[:alpha:]]+")
+  exportPattern("^[[:alpha:]]+")
 
   importFrom("stats", "as.ts", "lag", "median", "na.omit", "sd", "var")
 
@@ -11,6 +11,17 @@ exportPattern("^[[:alpha:]]+")
   importFrom("graphics", "abline", "par", "title")
 
   importFrom("stats", "scatter.smooth")
+
+  importFrom("utils", "read.csv")
+
+  importFrom("graphics", "hist")
+
+  importFrom("stats", "ts.plot")
+
+  importFrom("graphics", "lines")
+  importFrom("stats", "density")
+  importFrom("utils", "combn")
+    importFrom("stats", "as.formula")
 
 
 
