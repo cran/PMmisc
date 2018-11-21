@@ -10,17 +10,17 @@
 #' @param x :a data frame
 #' @param n :number column to sort
 #' @param desc :the order of sorting, default set to TRUE; for ascending order set to FALSE
-#' @examples df.sortcol(mtcars,1,desc = TRUE)
+#' @examples df.sortcol(mtcars,2,desc = TRUE)
 
 df.sortcol <- function(x, n, desc = T){
 
   if(desc == FALSE){
 
-    x[order(x[,1]), ]
+    x[order(x[,n]), ]
 
   }else{
 
-    x[order(x[,1], decreasing = T), ]
+    x[order(x[,n], decreasing = T), ]
 
   }
 

@@ -13,8 +13,6 @@
 
 pl.hist <- function(x,l = 1){
 
-
-
   x <- x
   var <- names(x)
   n <- length(var)

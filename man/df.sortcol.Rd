@@ -17,5 +17,5 @@ df.sortcol(x,n,desc)
 Sort a data frame by a column of choice. The column of choice is specified by the number of the column.
 }
 \examples{
-df.sortcol(mtcars,1,desc = TRUE)
+df.sortcol(mtcars,2,desc = TRUE)
 }

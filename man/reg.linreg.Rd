@@ -12,8 +12,9 @@ reg.linreg(dataframe,dependent)
 \item{dependent}{:dependent variable}
 }
 \description{
-This function will take a data frame and the dependent variable, and fit all possible combinations of models.
-The result will be a data frame of models and test statistics for all the models possible.
+This function will take a data frame and the dependent variable and fit all possible combinations of models.
+The result will be a data frame of models and test statistics for all the models possible. The test statistics are current set and contain all
+the following: R-squared, Adjusted R-squared, Degree of freedom, Residual standard error, AIC, BIC, Durbin-Watson statistic.
 }
 \examples{
 reg.linreg(mtcars,"mpg")

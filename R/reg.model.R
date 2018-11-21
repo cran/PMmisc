@@ -2,13 +2,6 @@
 # regression model generator
 ###########################################################################################################################
 
-# This function is used to generate fomular object to be used in regression functions
-
-# dependent <- "wt"
-
-# dataframe <- mtcars
-
-## dependent is the column name of the dependent variable
 #' @name reg.model
 #' @aliases reg.model
 #' @title Linear model generator
@@ -21,14 +14,16 @@
 reg.model <- function(dataframe, dependent){
 
   # seperate dependent variable and independent variables
-  depen <- dataframe[ ,dependent]
   dataframe <- dataframe[ ,names(dataframe) != dependent]
 
 
   # number of unique independent varibales
   indnum <- dim(dataframe)[2]
-  model_data_frame <- as.data.frame(matrix(nrow = (2^indnum)-1, ncol = 2))
+  model_vector <- vector(mode = "logical", length = (2^indnum)-1)
+
   modelnum <- 1
+
+  indnames <- names(dataframe)
 
   # i is the number of independent variables
   for(i in 1 : indnum){
@@ -38,32 +33,31 @@ reg.model <- function(dataframe, dependent){
 
     for(j in 1 : dim(comb)[2]){
 
-      inddata <- dataframe[comb[,j]]
-      regdata <- merge(depen, inddata)
+      indname <- indnames[comb[,j]]
+
       # basic formula format
       form <- paste0(dependent,"~")
 
       for(h in 1:i){
 
-        form <- paste0(form, names(regdata)[h+1],"+")
+        form <- paste0(form, indname[h],"+")
 
       }
 
-      formul <- substring(form,1,nchar(form)-1)
-      # formula <- as.formula(formul)
+      formul <- substring(form, 1, nchar(form)-1)
       #print(formul)
 
-      model_data_frame[modelnum, 1] <- modelnum
-      model_data_frame[modelnum, 2] <- formul
+      model_vector[modelnum] <- formul
       modelnum <- modelnum + 1
       #print(modelnum)
 
     }
 
   }
-  names(model_data_frame) <- c("Num", "Model")
-  model_data_frame <- model_data_frame[1:(2^indnum)-1, ]
+  model_data_frame <- data.frame(model_vector, stringsAsFactors = FALSE)
+
+  names(model_data_frame) <- c("Model")
+
   return(model_data_frame)
 
 }
-

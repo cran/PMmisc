@@ -24,9 +24,8 @@ pl.s <- function(x,dependent,l = 1){
   var <- names(x)
   n <- length(var)
 
-  hist(dependent, main = paste("Fig.", paste(l, paste("Scatter plot of",yl))), xlab = yl)
   for(i in 1:n){
-    plot(x[,i], main = paste("Fig.", paste(i+l, paste("Scatter plot of",var[i]))), xlab = var[i])
+    plot(x[,i], dependent, main = paste("Fig.", paste(i+1-1, paste("Scatter plot of",var[i],"v.",yl))), xlab = var[i], ylab = yl)
   }
 
 }

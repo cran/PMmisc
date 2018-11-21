@@ -1,27 +1,20 @@
   exportPattern("^[[:alpha:]]+")
-
   importFrom("stats", "as.ts", "lag", "median", "na.omit", "sd", "var")
-
   importFrom("stats", "cor")
-
   importFrom("graphics", "plot", "text")
-
   importFrom("stats", "pnorm", "lm")
-
   importFrom("graphics", "abline", "par", "title")
-
   importFrom("stats", "scatter.smooth")
-
   importFrom("utils", "read.csv")
-
   importFrom("graphics", "hist")
-
   importFrom("stats", "ts.plot")
-
   importFrom("graphics", "lines")
   importFrom("stats", "density")
   importFrom("utils", "combn")
-    importFrom("stats", "as.formula")
-
-
-
+  importFrom("stats", "as.formula")
+  importFrom("stats", "runif")
+  importFrom("stats", "qqline", "qqnorm")
+  importFrom("stats", "lm.fit")
+  importFrom("stats", "IQR")
+  import("ggplot2")
+  import("grid")

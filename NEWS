@@ -1,9 +1,41 @@
 R News:
 
 ==================================================
+PMmisc 0.1.2
+==================================================
+2018-November-22
+
+Happy Thanks Giving!
+
+Bug fixes:
+
+  Fixed df.sort not working due to a coding error
+  Fixed pl.s having wrong title generated
+  Fixed pl.sm having wrong title generated
+
+New Function:
+
+cv.powers to generate new varibables
+cv.logs to generate new varibables
+cv.axp to generate new varibables
+-------------------------------------------------
+reg.linreg now is with optimized coding, runs 99% faster
+reg.r.suqred for reg.linreg result generation
+reg.adjr.suqred for reg.linreg result generation
+reg.aic for reg.linreg result generation
+reg.bic for reg.linreg result generation
+reg.dof for reg.linreg result generation
+reg.std.err for reg.linreg result generation
+reg.dw for reg.linreg result generation
+*Note: All the test statistics add as functions are to improve reg.linreg efficiency for large number of model calculations.
+-------------------------------------------------
+pl.histgg for batch graph generation with ggplot2
+*Note: This is a test to convert most pl.* functions from base graph to ggplot2. However, its current version runs very slow.
+
+==================================================
 PMmisc 0.1.1
 ==================================================
-2017-July-17
+2018-July-17
 
 Added package NEWS File.
 

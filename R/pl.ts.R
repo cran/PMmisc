@@ -13,14 +13,12 @@
 
 pl.ts <- function(x,l = 1){
 
-
-
   x <- x
   var <- names(x)
   n <- length(var)
 
   for(i in 1:n){
-    ts.plot(x[,i], main = paste("Fig.", paste(i+l-1, paste("Histogram of",var[i]))), xlab = var[i])
+    ts.plot(x[,i], main = paste("Fig.", paste(i+l-1, paste("Timeseries plot of",var[i]))), xlab = var[i])
   }
 
 }

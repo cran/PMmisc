@@ -4,19 +4,21 @@
 \alias{pl.3txt}
 \title{Scatter plot with text overlay}
 \usage{
-pl.3txt(x,y,txt)
+pl.3txt(x,y,txt,title)
 }
 \arguments{
-\item{x}{: a numeric vector}
+\item{x}{:a numeric vector}
 
-\item{y}{: a numeric vector}
+\item{y}{:a numeric vector}
 
-\item{txt}{: a vector used as labels}
+\item{txt}{:a vector used as labels}
+
+\item{title}{:title of the graph}
 }
 \description{
 Generate a scatter plot with text overlay. This plot is to better show the effect of
 the text variable in the domain of x and y variable.
 }
 \examples{
-pl.3txt(mtcars[,1], mtcars[,3], row.names(mtcars))
+pl.3txt(mtcars[,1], mtcars[,3], row.names(mtcars),"mpg v. cyl")
 }
